@@ -206,8 +206,9 @@
       50% { border-color: white; }
     }
     .card {
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+
     }
 
     .card:hover {
@@ -449,162 +450,137 @@
   </div>
 
 
-  <div id="proj" class="helo">
-    <p style="text-align:center" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-      Projects</p>
-    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-      <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-      <!--Card 1-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://github.com/keya714/ROME'">
-        <!-- <img class="w-full" src="/mountain.jpg" alt="Mountain"> -->
+<div id="proj" class="container mx-auto px-4 py-8">
+    <p class="text-center mb-12 text-4xl sm:text-5xl font-extrabold text-gray-900">
+      Projects
+    </p>
+
+    <!-- Main grid container for all project cards -->
+    <!-- The grid is responsive: 1 column on mobile, 2 on medium screens, and 3 on large screens -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://github.com/keya714/ROME'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Editing GPT-2 XL with ROME (Rank-One Model Editing)</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Editing GPT-2 XL with ROME (Rank-One Model Editing)</div>
           <p class="text-gray-700 text-base">
             Implemented the ROME method to apply targeted edits to a large language model (gpt2-xl). The experiment focused on inserting a counterfactual fact—changing the model’s internal knowledge.
-          </div>
+          </p>
+        </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PyTorch</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ROME (Rank-One Model Editing)</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#PyTorch</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#ROME (Rank-One Model Editing)</span>
         </div>
       </div>
-      <!--Card 2-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://github.com/keya714/KnowledgeGraph-RAGwithNeo4J'">
-        <!-- <img class="w-full" src="/mountain.jpg" alt="Mountain"> -->
+
+      <!-- Card 2 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://github.com/keya714/KnowledgeGraph-RAGwithNeo4J'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Knowledge Graph RAG with Neo4j</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Knowledge Graph RAG with Neo4j</div>
           <p class="text-gray-700 text-base">
-            Developed a Knowledge Graph-driven Retrieval-Augmented Generation (RAG) system using Neo4j, Llama 3.2, and Gemini-Flash 2.5, enabling context-aware and conversational answers over a structured movie dataset</p>
+            Developed a Knowledge Graph-driven Retrieval-Augmented Generation (RAG) system using Neo4j, Llama 3.2, and Gemini-Flash 2.5, enabling context-aware and conversational answers over a structured movie dataset.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Knowledge Graph</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#RAG</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Neo4j</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Knowledge Graph</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#RAG</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Neo4j</span>
         </div>
       </div>
-      <!--Card 3-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://github.com/keya714/DistributedStreamingPlatformClone'">
-        <!-- <img class="w-full" src="/mountain.jpg" alt="Mountain"> -->
+
+      <!-- Card 3 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://github.com/keya714/DistributedStreamingPlatformClone'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Distributed Streaming Platform Clone</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Distributed Streaming Platform Clone</div>
           <p class="text-gray-700 text-base">
-            Engineered a Netflix-like platform using a microservices architecture with separate servers for India, USA,
-            and UK movies,
-            integrated with Kong API Gateway for Routing, Prometheus for monitoring, and robust security measures.</p>
+            Engineered a Netflix-like platform using a microservices architecture with separate servers for India, USA, and UK movies, integrated with Kong API Gateway for Routing, Prometheus for monitoring, and robust security measures.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Microservices Architecture</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#API Gateway and Monitoring</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Security</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Microservices Architecture</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#API Gateway and Monitoring</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Security</span>
         </div>
       </div>
-    </div>
-    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-      <!--Card 1-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://docs.google.com/document/d/1pATwlXQgOpmppuyJ5okyBlKtfsf2lLP6PbVUJ99ePM8/edit?usp=sharing'">
-        <!-- <img class="w-full" src="/river.jpg" alt="River"> -->
+
+      <!-- Card 4 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://docs.google.com/document/d/1pATwlXQgOpmppuyJ5okyBlKtfsf2lLP6PbVUJ99ePM8/edit?usp=sharing'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Physics Informed Neural Network</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Physics Informed Neural Network</div>
           <p class="text-gray-700 text-base">
-            Optimized Hyperparameter of the Graph Network-based Simulators (GNS) to achieve 95% accurate prediction in
-            substantially less time and computational resources.</p>
+            Optimized Hyperparameter of the Graph Network-based Simulators (GNS) to achieve 95% accurate prediction in substantially less time and computational resources.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Physics-Informed AI</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Hyperparameter Optimization</span>
-          <span
-             class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Graph Neural Network</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Physics-Informed AI</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Hyperparameter Optimization</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Graph Neural Network</span>
         </div>
       </div>
-      <!--Card 2-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://github.com/keya714/Chatwithscientificdocument'">
-        <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+
+      <!-- Card 5 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://github.com/keya714/Chatwithscientificdocument'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Mistral Chat with Scientific Document</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Mistral Chat with Scientific Document</div>
           <p class="text-gray-700 text-base">
-            Led a team to develop web-based applications for processing diverse documents types. The chatbot is nearly
-            accurate in answering logical questions and factual questions.</p>
+            Led a team to develop web-based applications for processing diverse documents types. The chatbot is nearly accurate in answering logical questions and factual questions.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#RAG</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#StreamLit</span>
-        </div>
-      </div>      
-      <!--Card 3-->
-      <div class="rounded overflow-hidden shadow-lg card" onclick="window.location.href='https://github.com/keya714/Brats2024Challenge'">
-        <!-- <img class="w-full" src="/mountain.jpg" alt="Mountain"> -->
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">Brain Tumour Segmentation Challenge</div>
-          <p class="text-gray-700 text-base">
-            Trained 3d segmentation models like nnUnet and monai SegResNet and achieved an average pseudo dice of 0.85
-            and 0.75
-            respectively for different affected regions of the Brain Tumour.</p>
-        </div>
-        <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#3D Segmentation Models</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#AI in Healtcare</span>
-          <!-- <span -->
-            <!-- class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span> -->
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#RAG</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#LLM</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#StreamLit</span>
         </div>
       </div>
-    </div>
-    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-      <!--Card 1-->
-      <div class="rounded overflow-hidden shadow-lg card">
-        <!-- <img class="w-full" src="/river.jpg" alt="River"> -->
+
+      <!-- Card 6 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105" onclick="window.location.href='https://github.com/keya714/Brats2024Challenge'">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">IntelliText: A Web-Based Document Analyzer</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">Brain Tumour Segmentation Challenge</div>
           <p class="text-gray-700 text-base">
-            Engineered a Python-based web app that enhances text input and achieves more than 90% accurate
-            auto-correction and
-            predictive text generation.</p>
+            Trained 3d segmentation models like nnUnet and monai SegResNet and achieved an average pseudo dice of 0.85 and 0.75 respectively for different affected regions of the Brain Tumour.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#NLP</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Web Development</span>
-          <!-- <span -->
-            <!-- class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#NLP</span> -->
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#3D Segmentation Models</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#AI in Healtcare</span>
         </div>
       </div>
-      <!--Card 2-->
-      <div class="rounded overflow-hidden shadow-lg card">
-        <!-- <img class="w-full" src="/forest.jpg" alt="Forest"> -->
+
+      <!-- Card 7 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105">
         <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">SecureShare: Real-Time Collaborative Editing with IP-Based Access Control
-            and Encryption</div>
+          <div class="font-bold text-xl mb-2 text-gray-800">IntelliText: A Web-Based Document Analyzer</div>
           <p class="text-gray-700 text-base">
-            Developed a web-application for sharing documents which provides 100% reduction in unauthorized data access
-            in a local server
-            system in a fully automated manner.</p>
+            Engineered a Python-based web app that enhances text input and achieves more than 90% accurate auto-correction and predictive text generation.
+          </p>
         </div>
         <div class="px-6 pt-4 pb-2">
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Real-Time Collaboration System</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Computer Networks</span>
-          <span
-            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Security and Authenciation</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#NLP</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Web Development</span>
         </div>
       </div>
+
+      <!-- Card 8 -->
+      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl card hover:scale-105">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-gray-800">SecureShare: Real-Time Collaborative Editing with IP-Based Access Control and Encryption</div>
+          <p class="text-gray-700 text-base">
+            Developed a web-application for sharing documents which provides 100% reduction in unauthorized data access in a local server system in a fully automated manner.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Real-Time Collaboration System</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Computer Networks</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Security and Authenciation</span>
+        </div>
+      </div>
+
     </div>
   </div>
+
+
+
   <section id="rproj" class="py-12 bg-gray-50">
     <div class="text-center mb-10">
       <h2 class="text-4xl font-extrabold text-gray-900">Research Projects</h2>
